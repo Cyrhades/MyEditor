@@ -1,4 +1,5 @@
 import Menu from './Menu.js'
+import PopUp from './PopUp.js'
 
 /**
  * Cette classe gére l'interface utilisateur
@@ -14,7 +15,8 @@ export default class UserInterface {
      */
     constructor(selector, options = {}) {
         this.rootElement =  document.querySelector(selector)
-        this.menu = new Menu()
+        this.popUp = new PopUp(this);
+        this.menu = new Menu(this)
         this.options = options
 
         this.init()

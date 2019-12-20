@@ -1,17 +1,18 @@
 export default class Menu {
      
-    constructor() {
+    constructor(UI) {
+        this.ui = UI;
         this.elements = [
             {
-                title : 'Test 1',
+                title : 'Créer un nouveau niveau',
                 callback : () => {
-                    alert('ok element 1');
+                    
                 }
             },
             {
-                title : 'Menu 2',
+                title : 'Créer une tuile',
                 callback : () => {
-                    alert('element 2');
+                    alert('Création du tuile');
                 }
             }
         ]
