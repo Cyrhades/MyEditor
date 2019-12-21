@@ -6,7 +6,7 @@ export default class Menu {
             {
                 title : 'Créer un nouveau niveau',
                 callback : () => {
-                    
+                    this.ui.openWindow('new_world','Nouveau niveau', null, 300, 200, 100, 200, true, true);
                 }
             },
             {

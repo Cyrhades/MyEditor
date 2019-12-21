@@ -15,7 +15,7 @@ export default class UserInterface {
      */
     constructor(selector, options = {}) {
         this.rootElement =  document.querySelector(selector)
-        this.popUp = new PopUp(this);
+        this.popUp = new PopUp(this)
         this.menu = new Menu(this)
         this.options = options
 
@@ -25,7 +25,12 @@ export default class UserInterface {
     init() {
         this.generateMenu()
     }
-
+    
+    openWindow(name, title, icon, width = 400, height = 400, left = 0, top = 0,  draggable = true, closable = true) {
+        this.rootElement.appendChild(
+            this.popUp.create(name, title, icon, width, height, left, top, draggable, closable)
+        )
+    }
 
     generateMenu() {
         let menu = document.createElement('ul')
